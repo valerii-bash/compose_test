@@ -9,7 +9,7 @@ object InMemoryDb {
 
     init {
         val isLoggedIn = Random.nextInt() % 2 == 0
-        _db = MutableStateFlow(true)
+        _db = MutableStateFlow(isLoggedIn)
     }
     val db = _db.asStateFlow()
 
